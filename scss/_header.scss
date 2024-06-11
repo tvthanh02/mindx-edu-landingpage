@@ -1,11 +1,20 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 80px;
   display: flex;
   background-color: white;
   align-items: center;
   box-shadow: 0px 8px 17px -6px rgba(0, 0, 0, 0.26);
+  z-index: 11;
 
   @include mobile {
+    box-shadow: none;
+  }
+
+  @include tablet {
     box-shadow: none;
   }
 
@@ -56,6 +65,17 @@
     }
     position: absolute;
     @include mobile {
+      height: 0;
+      display: flex;
+      top: 120%;
+      left: 0;
+      right: 0;
+      background-color: white;
+      justify-content: flex-start;
+      padding: 0 15px;
+      overflow: hidden;
+    }
+    @include tablet {
       height: 0;
       display: flex;
       top: 120%;
@@ -217,7 +237,88 @@
         }
 
         .navlink__sub {
+          z-index: 10;
           @include mobile {
+            &.open {
+              display: block;
+            }
+
+            // @include desktop {
+            //   display: none;
+            // }
+            display: none;
+            width: 100%;
+            max-height: 230px;
+            background-color: white;
+            list-style: none;
+
+            border-radius: 8px;
+            overflow-y: scroll;
+
+            &-item {
+              width: 100%;
+              min-height: 56px;
+
+              //   @include desktop {
+              //     &:hover .navlink__sub {
+              //       display: block;
+              //     }
+              //   }
+
+              .navlink__sub-2 {
+                &.open {
+                  display: block;
+                }
+                display: none;
+
+                width: 100%;
+
+                overflow: hidden;
+                background-color: white;
+                list-style: none;
+                left: 100%;
+                top: 0;
+
+                border-radius: 8px;
+
+                &-item {
+                  position: relative;
+                  width: 100%;
+                  height: 56px;
+                }
+
+                &-link {
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  text-decoration: none;
+                  color: rgb(105 105 105 / 1);
+                  padding: 8px 16px;
+                }
+              }
+            }
+
+            &-link {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              text-decoration: none;
+              color: rgb(105 105 105 / 1);
+              padding: 16px 16px;
+              gap: 10px;
+
+              //   @include desktop {
+              //     &:hover {
+              //       background-color: #161111;
+              //     }
+              //   }
+            }
+          }
+          @include tablet {
             &.open {
               display: block;
             }
