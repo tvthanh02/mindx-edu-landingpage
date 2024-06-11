@@ -1,0 +1,112 @@
+.slider {
+  width: 100%;
+  height: 630px;
+  @include mobile {
+    height: 205px;
+  }
+  // padding-top: 50%;
+  position: relative;
+  margin: 120px auto 40px;
+
+  .btn-navigate {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    font-size: 2rem;
+    box-shadow: #00000026 0px 4px 8px 0px;
+    &:hover {
+      cursor: pointer;
+    }
+    z-index: 10;
+
+    &.btn-prev {
+      left: 25px;
+    }
+
+    &.btn-next {
+      right: 25px;
+    }
+  }
+
+  .slides {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 20px;
+    overflow: hidden;
+    list-style: none;
+
+    &__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+
+      img {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+      }
+
+      &.active {
+        animation: slide 1.2s linear forwards;
+      }
+
+      @keyframes slide {
+        0% {
+          opacity: 0;
+        }
+        30% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 0.6;
+        }
+        70% {
+          opacity: 0.8;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .dots {
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100% + 15px);
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    .dot {
+      width: 8px;
+      height: 8px;
+      background-color: #ffbcbf;
+      border-radius: 100%;
+
+      &.active {
+        width: 24px;
+        border-radius: 10px;
+        background-color: red;
+      }
+
+      &:hover:not(.active) {
+        cursor: pointer;
+      }
+    }
+  }
+}

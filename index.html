@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trường học công nghệ MindX</title>
-    <link rel="stylesheet" href="./styte.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link
       rel="icon"
       href="https://mindx.edu.vn/_next/static/media/favicon.fafa9193.ico"
@@ -12,32 +12,259 @@
   </head>
   <body>
     <header class="header">
-      <!--start header -->
-      <div class="header__wrap container">
-        <!--start logo-->
-        <a class="header__logo" href="./index.html">
-          <img src="https://mindx.edu.vn/logo.svg" alt="LOGO" />
-        </a>
-        <!--end logo-->
-        <!--start menu-->
-        <nav class="header__navlink">
-          <!-- list nav-->
-          <ul class="navlink__items"></ul>
-          <!--end list nav-->
-        </nav>
-        <!--end menu-->
-        <!--bars icon responsive-->
-        <div class="header__icon-bars">
-          <i class="bars fa-solid fa-bars"></i>
+      <div class="container">
+        <!--start header -->
+        <div class="header__wrap">
+          <!--start logo-->
+          <a class="header__logo" href="./index.html">
+            <img src="https://mindx.edu.vn/logo.svg" alt="LOGO" />
+          </a>
+          <!--end logo-->
+          <!--start menu-->
+          <nav class="header__navlink">
+            <!-- list nav-->
+            <ul class="navlink__items"></ul>
+            <!--end list nav-->
+          </nav>
+          <!--end menu-->
+          <!--bars icon responsive-->
+          <div class="header__icon-bars">
+            <i class="bars fa-solid fa-bars"></i>
+          </div>
+          <!--end bars-->
         </div>
-        <!--end bars-->
+        <!-- end header-->
       </div>
-      <!-- end header-->
     </header>
     <main>
-      <section class="slider"></section>
-      <section class="enterprise"></section>
-      <section class="coures"></section>
+      <section class="slider container">
+        <div class="btn-navigate btn-prev">
+          <i class="fa-solid fa-angle-left"></i>
+        </div>
+        <ul class="slides">
+          <li class="slides__item">
+            <img
+              src="https://images-proxy.mindx.edu.vn/1120x,webp/https://website-dev.hn.ss.bfcplatform.vn/Artboard_3_copy_2b09cde594.png"
+              alt="BANNER"
+            />
+          </li>
+          <li class="slides__item">
+            <img
+              src="https://images-proxy.mindx.edu.vn/1120x,webp/https://website-dev.hn.ss.bfcplatform.vn/resize_16_x_9_731bba381c.png"
+              alt="BANNER"
+            />
+          </li>
+        </ul>
+        <div class="btn-navigate btn-next">
+          <i class="fa-solid fa-angle-right"></i>
+        </div>
+        <ul class="dots">
+          <li class="dot"></li>
+          <li class="dot active"></li>
+        </ul>
+      </section>
+      <section class="enterprise">
+        <div class="container">
+          <div class="enterprise-container">
+            <div class="enterprise-wrap">
+              <article class="enterprise__card">
+                <p class="enterprise__card-numbers">40+</p>
+                <p class="enterprise__card-title">Cơ sở trên toàn quốc</p>
+              </article>
+              <article class="enterprise__card">
+                <p class="enterprise__card-numbers">40.000+</p>
+                <p class="enterprise__card-title">
+                  Học sinh đã tốt nghiệp và đi ra thế giới từ MindX
+                </p>
+              </article>
+              <article class="enterprise__card">
+                <p class="enterprise__card-numbers">16.5%</p>
+                <p class="enterprise__card-title">
+                  Học sinh đang học tập và làm việc tại 12 quốc gia trên thế
+                  giới
+                </p>
+              </article>
+              <article class="enterprise__card">
+                <p class="enterprise__card-numbers">96%</p>
+                <p class="enterprise__card-title">
+                  Tỷ lệ học viên có việc làm sau khi tốt nghiệp
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="course">
+        <h2 class="course__heading container">Tổng hợp lộ trình học</h2>
+        <div class="course__section-wrap">
+          <div class="course__section container">
+            <div class="course__section-aside course__content">
+              <h3 class="course__section-heading">
+                Khai phá tiềm năng ( 6 - 12 tuổi )
+              </h3>
+              <p class="course__section-description">
+                Con có thiên hướng tư duy logic hay tư duy sáng tạo? Khám phá lộ
+                trình phù hợp để con được trải nghiệm, bộc lộ và phát huy tối đa
+                năng lực của mình.
+              </p>
+              <ul class="course__section-listcourse">
+                <li class="course__section-course">
+                  <a href="#" class="course__section-course-link">
+                    Khóa học lập trình
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </li>
+                <li class="course__section-course">
+                  <a href="#" class="course__section-course-link">
+                    Khóa học Robotics: Lắp ráp & chế tạo robot STEM
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </li>
+                <li class="course__section-course">
+                  <a href="#" class="course__section-course-link">
+                    Khóa học Digital Art (Mỹ thuật số): Lộ trình vẽ painting
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </li>
+                <li class="course__section-course">
+                  <a href="#" class="course__section-course-link">
+                    Khóa học tiếng Anh: Ứng dụng phương pháp STEAM
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </li>
+              </ul>
+              <button class="course__section-btn-more">
+                Tổng hợp lộ trình 6-12 tuổi
+              </button>
+            </div>
+            <div class="course__section-aside right-side">
+              <img
+                src="https://images-proxy.mindx.edu.vn/560x,webp/https://website-dev.hn.ss.bfcplatform.vn/Kids_cover_c176a5130f.png"
+                alt="ASIDE_PHOTO"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="course__section-wrap">
+          <div class="course__section container">
+            <div class="course__section-aside course__content">
+              <h3 class="course__section-heading">
+                Bệ phóng nhân tài (13-17 tuổi)
+              </h3>
+              <p class="course__section-description">
+                Lối đi nào để con trở thành nhà lãnh đạo công nghệ tương lai?
+                Giúp con phát triển phẩm chất, kỹ năng và tư duy làm chủ ngay từ
+                khi còn ngồi trên ghế nhà trường.
+              </p>
+              <ul class="course__section-listcourse">
+                <li class="course__section-course">
+                  <a href="#" class="course__section-course-link">
+                    Khóa học lập trình
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </li>
+                <li class="course__section-course">
+                  <a href="#" class="course__section-course-link">
+                    Khóa học Robotics: Lắp ráp & chế tạo robot STEM
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </li>
+                <li class="course__section-course">
+                  <a href="#" class="course__section-course-link">
+                    Khóa học Digital Art (Mỹ thuật số): Lộ trình vẽ painting
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </li>
+                <li class="course__section-course">
+                  <a href="#" class="course__section-course-link">
+                    Khóa học tiếng Anh: Ứng dụng phương pháp STEAM
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </li>
+              </ul>
+              <button class="course__section-btn-more">
+                Tổng hợp lộ trình 13-17 tuổi
+              </button>
+            </div>
+            <div class="course__section-aside right-side">
+              <img
+                src="https://images-proxy.mindx.edu.vn/560x,webp/https://website-dev.hn.ss.bfcplatform.vn/Teen_cover_65f1887744.png"
+                alt="ASIDE_PHOTO"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="course__section-wrap">
+          <div class="course__section container">
+            <div class="course__section-aside course__content">
+              <h3 class="course__section-heading">
+                Dấn thân (18 tuổi trở lên)
+              </h3>
+              <p class="course__section-description">
+                Chinh phục những công nghệ và kỹ năng mới để tạo ra những sản
+                phẩm có ý nghĩa cho cộng đồng và xã hội. Sẵn sàng bắt đầu sự
+                nghiệp mơ ước chỉ trong 6-8 tháng.
+              </p>
+              <ul class="course__section-listcourse">
+                <li class="course__section-course">
+                  <a href="#" class="course__section-course-link">
+                    Khóa học Data Analyst: Phân tích dữ liệu cho người mới bắt
+                    đầu
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </li>
+                <li class="course__section-course">
+                  <a href="#" class="course__section-course-link">
+                    Khóa học lập trình Web (Full-Stack): Code cơ bản đến nâng
+                    cao
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </li>
+                <li class="course__section-course">
+                  <a href="#" class="course__section-course-link">
+                    Khóa học Business Analyst (IT): Phân tích nghiệp vụ phần mềm
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </li>
+                <li class="course__section-course">
+                  <a href="#" class="course__section-course-link">
+                    Khóa học UI/UX Design từ cơ bản đến nâng cao - MindX School
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </li>
+                <li class="course__section-course">
+                  <a href="#" class="course__section-course-link">
+                    Khóa học Marketing Online chuyên sâu cho người mới bắt đầu
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </li>
+                <li class="course__section-course">
+                  <a href="#" class="course__section-course-link">
+                    Khóa học Product Management (Quản lý Sản phẩm) - MindX
+                    School
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </li>
+                <li class="course__section-course">
+                  <a href="#" class="course__section-course-link">
+                    Khóa học Thiết kế Đồ họa (Graphic Design) chuyên sâu - MindX
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </li>
+              </ul>
+              <button class="course__section-btn-more">
+                Tổng hợp lộ trình cho sinh viên và người đi làm
+              </button>
+            </div>
+            <div class="course__section-aside right-side">
+              <img
+                src="https://images-proxy.mindx.edu.vn/560x,webp/https://website-dev.hn.ss.bfcplatform.vn/SV_cover_10c74f8b62.png"
+                alt="ASIDE_PHOTO"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="scholarship"></section>
       <section class="companys"></section>
       <section class="talents"></section>
@@ -45,7 +272,7 @@
       <section class="news"></section>
     </main>
     <footer class="footer">footer</footer>
-    <script type="module" src="./mock/navs.js"></script>
+    <script src="./mockApi/slides.js"></script>
     <script type="module" src="./script.js"></script>
   </body>
 </html>
