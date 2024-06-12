@@ -1,0 +1,115 @@
+.news {
+  position: relative;
+  margin: 40px auto;
+  &__heading-content {
+    font-size: 4rem;
+    font-weight: 4.8rem;
+    font-weight: 700;
+  }
+
+  &__content {
+    padding: 40px 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__card {
+    padding: 24px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px 2px $shadow;
+    &-link {
+      display: flex;
+      @include mobile {
+        flex-direction: column;
+      }
+      width: 100%;
+      align-items: center;
+      gap: 30px;
+      color: $gray;
+      text-decoration: none;
+    }
+
+    &-thumbnail {
+      @include desktop {
+        flex-basis: calc((100% - 30px) / 3);
+        flex-shrink: 0;
+      }
+      @include tablet {
+        flex-basis: calc((100% - 30px) / 2);
+        flex-shrink: 0;
+      }
+
+      @include mobile {
+        width: 100%;
+      }
+      img {
+        border-radius: 1.6rem;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    &-data {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      &-categories {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        &-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          font-weight: 400;
+          padding: 4px 8px;
+          border-radius: 8px;
+          background-color: $green;
+          transition: all 0.3s ease-in-out;
+
+          &.gray {
+            background-color: rgb(126 126 126/1);
+            color: white;
+          }
+
+          &:hover {
+            filter: brightness(110%);
+          }
+        }
+      }
+      &-heading {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__more-btn {
+    @include desktop {
+      min-width: 280px;
+      top: 100%;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+    }
+    @include tablet {
+      min-width: 280px;
+      top: 100%;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+    }
+    @include mobile {
+      width: 100%;
+    }
+    @extend %btn;
+  }
+}

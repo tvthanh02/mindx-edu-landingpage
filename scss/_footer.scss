@@ -1,0 +1,117 @@
+.footer {
+  margin-top: 100px;
+
+  &__top {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+    gap: 30px;
+
+    &-col:first-child {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      .footer__logo {
+      }
+
+      .footer__socials {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
+    @include mobile {
+      &-col:first-child {
+        grid-row: 4;
+      }
+      &-col:nth-child(2) {
+        grid-row: 1;
+      }
+      &-col:nth-child(3) {
+        grid-row: 2;
+      }
+      &-col:nth-child(4) {
+        grid-row: 3;
+      }
+    }
+
+    &-menu {
+      display: flex;
+      flex-direction: column;
+
+      &-title {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        font-weight: 700;
+      }
+
+      &-divider {
+        border-top: 1px solid $red;
+        margin: 15px 0;
+      }
+
+      &-navs {
+        list-style: none;
+      }
+
+      &-nav {
+        margin: 16px 0;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &-link {
+          text-decoration: none;
+          font-size: 1.4rem;
+          line-height: 1.8rem;
+          font-weight: 400;
+          color: $gray;
+        }
+      }
+    }
+  }
+
+  &__bot {
+    background-color: $gray;
+    color: white;
+    padding: 40px 0;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+
+    &-wrap {
+      display: grid;
+      grid-template-columns: 2.5fr 1fr;
+      @include mobile {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      gap: 10px;
+    }
+
+    &-col:first-child {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include mobile {
+      &-col:first-child {
+        grid-row: 2;
+      }
+      &-col:last-child {
+        grid-row: 1;
+      }
+    }
+  }
+}

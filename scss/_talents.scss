@@ -1,0 +1,112 @@
+.talents {
+  background-color: $bgTalentSection;
+  padding: 60px 0;
+
+  &-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__heading-content {
+    font-size: 4rem;
+    font-weight: 4.8rem;
+    font-weight: 700;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+    gap: 20px;
+
+    &-card {
+      width: 100%;
+      position: relative;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:hover &-avatar img {
+        transform: scale(120%);
+      }
+
+      &-avatar {
+        width: 100%;
+        flex: 1;
+        border-radius: 16px 16px 80px 16px;
+        overflow: hidden;
+
+        img {
+          transform-origin: top left;
+          width: 100%;
+          height: 100%;
+          transition: all 0.3s ease-in-out;
+          object-fit: cover;
+        }
+      }
+
+      &-info {
+        height: 164px;
+        padding: 20px 0;
+
+        &-alignHor {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          gap: 8px;
+        }
+
+        &-name {
+          font-size: 2.4rem;
+          line-height: 3.2rem;
+          font-weight: 700;
+        }
+        &-achievements {
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          font-weight: 400;
+          color: $gray;
+        }
+      }
+    }
+  }
+
+  &__more {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
+    text-align: center;
+
+    &-title {
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+      font-weight: 600;
+      color: $gray;
+    }
+
+    &-btn {
+      margin: 0 auto;
+      width: fit-content;
+      min-width: 280px;
+      @include mobile {
+        width: 100%;
+      }
+      @extend %btn;
+
+      &:hover {
+        cursor: pointer;
+        filter: brightness(110%);
+      }
+    }
+  }
+}

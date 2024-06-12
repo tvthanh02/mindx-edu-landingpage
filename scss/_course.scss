@@ -3,32 +3,6 @@
   flex-direction: column;
   gap: 40px;
 
-  &__heading {
-    position: relative;
-    font-size: 4rem;
-    line-height: 4.8rem;
-    font-weight: bold;
-    @include desktop {
-      padding-left: 30px;
-    }
-
-    &::before {
-      @include mobile {
-        display: none;
-      }
-      @include tablet {
-        display: none;
-      }
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      width: 3px;
-      height: 100%;
-      background-color: $red;
-    }
-  }
-
   &__section-wrap {
     padding: 40px 0;
     &:nth-child(odd) {
@@ -72,7 +46,7 @@
     &-description {
       font-size: 1.6rem;
       line-height: 2.4rem;
-      color: $text;
+      color: $description;
     }
     &-listcourse {
       list-style: none;
