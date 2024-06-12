@@ -4,7 +4,7 @@
   @include mobile {
     height: 205px;
   }
-  // padding-top: 50%;
+
   position: relative;
   margin: 120px auto 40px;
 
@@ -14,7 +14,7 @@
     transform: translateY(-50%);
     width: 32px;
     height: 32px;
-    background-color: #ffffff80;
+    background-color: $lightGray;
     display: flex;
     align-items: center;
     justify-content: center;
